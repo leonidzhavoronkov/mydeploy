@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: my deploy
 
 on:
   push:
@@ -6,9 +6,8 @@ on:
       - main
 
 jobs:
-  job1:
-    Name: Job1
+  MyStep1:
     runs-on: ubuntu-latest
-
-    name: check?
-    runs: pwd
+    steps:
+    - name: check?
+      run: pwd
