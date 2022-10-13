@@ -17,7 +17,7 @@ jobs:
       id: codiga
       uses: codiga/github-action@master
       with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: "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"
         codiga_api_token: ${{ secrets.CODE_INSPECTOR_CODIGA }}
         force_ref: 'none'
         min_quality_grade: 'WARNING'
