@@ -8,9 +8,21 @@ on:
 jobs:
   MyStep1:
     runs-on: ubuntu-latest
+
     steps:
     - name: Download repo
       uses: actions/checkout@v3
       
     - name: check?
       run: pwd
+  
+  MeStep2:
+    runs-on: ubuntu-latest
+    needs: MyStep1
+
+    steps:
+      - name: whoami?
+        run: whoami
+
+      - name: aws cli test
+        run: cli s3 ls
