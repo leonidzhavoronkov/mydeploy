@@ -24,5 +24,12 @@ jobs:
       - name: whoami?
         run: whoami
 
+      - name: Configure my AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id    :  "AKIAX7KWAWWCFKKBGSGT"
+          aws-secret-access-key:  "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"
+          aws-region           :  "eu-central-1"
+
       - name: aws cli test
         run: cli s3 ls
