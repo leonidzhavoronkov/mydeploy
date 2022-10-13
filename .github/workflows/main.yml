@@ -1,4 +1,4 @@
-name: My own deploy
+name: My first deploy
 
 on:
   push:
@@ -12,6 +12,9 @@ jobs:
     steps:
     - name: Download repo
       uses: actions/checkout@v3
+    
+    - name: npm install
+      run: npm install
       
     - name: check?
       run: npm test
