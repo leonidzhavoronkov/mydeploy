@@ -11,22 +11,7 @@ jobs:
 
     steps:
     - name: Download repo
-      uses: actions/checkout@v3
-    
-    - name: Check code meets quality standards
-      id: codiga
-      uses: codiga/github-action@master
-      with:
-        repo_token: "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"
-        codiga_api_token: ${{ secrets.CODE_INSPECTOR_CODIGA }}
-        force_ref: 'none'
-        min_quality_grade: 'WARNING'
-        min_quality_score: '50'
-        max_defects_rate: '0.0001'
-        max_complex_functions_rate: '0.0001'
-        max_long_functions_rate: '0.0001'
-        project_name: ''
-        max_timeout_sec: '600'
+      uses: actions/checkout@3
 
     - name: npm
       run: |
