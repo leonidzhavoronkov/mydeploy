@@ -13,11 +13,11 @@ jobs:
     - name: Download repo
       uses: actions/checkout@v3
     
-    - name: npm install
-      run: npm install
-      
-    - name: check?
-      run: npm test
+    - name: npm
+      run: |
+        npm install
+        npm init
+        npm test
   
   Step2:
     runs-on: ubuntu-latest
