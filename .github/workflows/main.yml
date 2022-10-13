@@ -9,5 +9,8 @@ jobs:
   MyStep1:
     runs-on: ubuntu-latest
     steps:
+    - name: Download repo
+      uses: actions/checkout@v3
+      
     - name: check?
       run: pwd
