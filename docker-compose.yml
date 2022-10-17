@@ -1,0 +1,7 @@
+version: *1*
+
+services:
+    image: nginx
+    restart: alwas
+    ports: 
+        - 80:80
